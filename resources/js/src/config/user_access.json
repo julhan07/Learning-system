@@ -74,7 +74,7 @@
             },
             {
                 "role" : 2,
-                "access" : ["read"]
+                "access" : ["read","create"]
             }
         ]
     }

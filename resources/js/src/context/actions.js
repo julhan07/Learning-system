@@ -29,6 +29,11 @@ function ActionContainer(props) {
         if (!status) {
             return navigate("/login");
         }
+
+        if (location.pathname == "/") {
+            return navigate("/dashboard");
+        }
+
         return navigate(location.pathname);
     }, [location]);
 
