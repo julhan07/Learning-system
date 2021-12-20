@@ -5850,6 +5850,10 @@ function ActionContainer(props) {
       return navigate("/login");
     }
 
+    if (location.pathname == "/" || location.pathname == "/login") {
+      return navigate("/dashboard");
+    }
+
     return navigate(location.pathname);
   }, [location]);
 
@@ -92203,7 +92207,7 @@ module.exports = JSON.parse('{"_from":"axios@^0.21","_id":"axios@0.21.4","_inBun
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('[{"key":1,"manu_name":"Beranda","path":"/dashboard","access_for":[{"role":1,"access":["create","read"]},{"role":4,"access":["read"]}]},{"key":2,"manu_name":"Pengguna","path":"/dashboard/user","access_for":[{"role":1,"access":["create","read","update"]}]},{"key":3,"manu_name":"Guru","path":"/dashboard/guru","access_for":[{"role":1,"access":["create","read","update"]},{"role":4,"access":["read"]}]},{"key":4,"manu_name":"Siswa","path":"/dashboard/siswa","access_for":[{"role":1,"access":["create","read","update","delete"]},{"role":4,"access":["read"]},{"role":2,"access":["read"]}]},{"key":5,"manu_name":"Kelas","path":"/dashboard/kelas","access_for":[{"role":1,"access":["create","read","update","delete"]},{"role":4,"access":["read"]},{"role":2,"access":["read"]}]}]');
+module.exports = JSON.parse('[{"key":1,"manu_name":"Beranda","path":"/dashboard","access_for":[{"role":1,"access":["create","read"]},{"role":4,"access":["read"]}]},{"key":2,"manu_name":"Pengguna","path":"/dashboard/user","access_for":[{"role":1,"access":["create","read","update"]}]},{"key":3,"manu_name":"Guru","path":"/dashboard/guru","access_for":[{"role":1,"access":["create","read","update"]},{"role":4,"access":["read"]}]},{"key":4,"manu_name":"Siswa","path":"/dashboard/siswa","access_for":[{"role":1,"access":["create","read","update","delete"]},{"role":4,"access":["read"]},{"role":2,"access":["read"]}]},{"key":5,"manu_name":"Kelas","path":"/dashboard/kelas","access_for":[{"role":1,"access":["create","read","update","delete"]},{"role":4,"access":["read"]},{"role":2,"access":["read","create"]}]}]');
 
 /***/ })
 

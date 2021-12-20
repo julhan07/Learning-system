@@ -30,7 +30,7 @@ function ActionContainer(props) {
             return navigate("/login");
         }
 
-        if (location.pathname == "/") {
+        if (location.pathname == "/" || location.pathname == "/login") {
             return navigate("/dashboard");
         }
 
