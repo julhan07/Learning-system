@@ -6,7 +6,6 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\TeacherController;
 use App\Http\Controllers\ClassRoomController;
-use App\Http\Controllers\MasterClassController;
 use App\Http\Controllers\ClassRoomStudentController;
 
 /*
