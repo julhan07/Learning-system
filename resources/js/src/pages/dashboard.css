@@ -1,0 +1,29 @@
+.ds-sidebar {
+    width: 250px;
+}
+
+.list-group-item.active {
+    z-index: 2;
+    color: #fff;
+    background-color: #ed4c5b;
+    border-color: rgb(255 255 255 / 15%);
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    /* font-size: medium; */
+}
+
+.list-group-item {
+    position: relative;
+    display: block;
+    padding: 0.5rem 1rem;
+    color: #12131494;
+    text-decoration: none;
+    background-color: #fff;
+    border: 1px solid rgb(245 232 232 / 13%);
+}
+
+a {
+    /* color: #faeff0; */
+    text-decoration: none;
+}
