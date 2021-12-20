@@ -1,27 +1,28 @@
-# author
+# Author
 
 -   Julhan Arif
 
-# requirents
+# Requirements
 
 -   PHP Version 8^
+-   Laravel 8
 -   Install composer
 -   Install Database MYSQL
 
-# stacks on project
+# Stacks on project
 
 -   ReactJs
 -   React Router
 -   Mysql DB
 -   PHP Laravel Server
 
-# initialize project
+# Initialize project
 
 -   clone https://github.com/julhan07/Learning-system
 -   composer update
 -   npm install / yarn
 
-# how to run:
+# How to run:
 
 -   make run (run laravel server)
 -   make dev-js (run javascrypt)
