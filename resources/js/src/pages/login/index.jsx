@@ -6,7 +6,6 @@ import { useNavigate } from "react-router-dom";
 
 import StoreNotification from "../../components/Notification";
 import FormItem from "../../components/boostrap/FormItem";
-import instance from "../../Axios/index";
 
 function Login() {
     const navigate = useNavigate();
@@ -39,9 +38,10 @@ function Login() {
             if (res.code == 200) {
                 setLoading(true);
                 localStorage.setItem("access_token", res.data.access_token);
+                window.location.reload(true);
                 setTimeout(() => {
-                    navigate("/dashboard", { replace: true });
                     setLoading(false);
+                    navigate("/dashboard");
                 }, 1000);
             }
         });
