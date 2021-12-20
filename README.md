@@ -2,7 +2,13 @@
 
 -   Julhan Arif
 
-# stack on project
+# requirents
+
+-   PHP Version 8^
+-   Install composer
+-   Install Database MYSQL
+
+# stacks on project
 
 -   ReactJs
 -   React Router
@@ -12,7 +18,7 @@
 # initialize project
 
 -   clone https://github.com/julhan07/Learning-system
--   composer upadate
+-   composer update
 -   npm install / yarn
 
 # how to run:
