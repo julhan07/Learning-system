@@ -40,7 +40,7 @@ function Login() {
                 setLoading(true);
                 localStorage.setItem("access_token", res.data.access_token);
                 setTimeout(() => {
-                    navigate("/dashboard");
+                    navigate("/dashboard", { replace: true });
                     setLoading(false);
                 }, 1000);
             }
