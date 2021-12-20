@@ -27,7 +27,7 @@ function ActionContainer(props) {
     const checking = useCallback(() => {
         const status = statusLogin();
         if (!status) {
-            return navigate("/login");
+            return navigate("/login", { replace: true });
         }
 
         if (location.pathname == "/" || location.pathname == "/login") {
