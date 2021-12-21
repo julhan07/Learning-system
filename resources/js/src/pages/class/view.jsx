@@ -5,6 +5,7 @@ import FormItem from "../../components/boostrap/FormItem";
 import BreadCrumb from "../../components/boostrap/breadcrumb";
 import UserIcon from "../../assets/user-icon.png";
 import Modal from "../../components/boostrap/Modal";
+import { Link } from "react-router-dom";
 
 function View(props) {
     const actions = useContext(ActionContext);
@@ -59,11 +60,13 @@ function View(props) {
     };
 
     const GetListSiswa = (search) => {
-        actions.Get(`/api/student/list?limit=100`, {}).then((res) => {
-            if (res.code == 200) {
-                setListSiswa(res.data.data);
-            }
-        });
+        actions
+            .Get(`/api/student/list?limit=100&search=${searchField}`, {})
+            .then((res) => {
+                if (res.code == 200) {
+                    setListSiswa(res.data.data);
+                }
+            });
     };
 
     const GetListID = useCallback(async () => {
@@ -101,7 +104,8 @@ function View(props) {
                         onChange={(e) => setSearchField(e.target.value)}
                     />
                     <button
-                        onClick={() => GetListSiswa(setSearchField)}
+                        onClick={() => GetListSiswa()}
+                        type="submit"
                         className="btn btn-success"
                     >
                         Search
@@ -114,7 +118,7 @@ function View(props) {
                             return (
                                 <li key={item.id} className="list-group-item">
                                     {item.nis} - {item.name}{" "}
-                                    <a>
+                                    <a href="#">
                                         <span
                                             style={{ marginLeft: 10 }}
                                             class="badge bg-light text-dark"

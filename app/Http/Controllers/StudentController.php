@@ -18,15 +18,14 @@ class StudentController extends Controller
     {
         try {
             $limit = $request->limit ? $request->limit : 10;
+            $search = $request->search ? $request->search : "";
         
-            $student = Student::m_get_all($limit);
+            $students = Student::m_get_all($limit, $request->search);
 
-            return CreateResponseApi(200, 'success', $student);
+            return CreateResponseApi(200, 'success', $students);
         } catch (\Throwable $th) {
             return CreateResponseApi(400, "error", $th);
-            //throw $th;
         }
-        //
     }
 
     /**

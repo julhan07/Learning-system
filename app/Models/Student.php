@@ -40,7 +40,7 @@ class Student extends Model
      */
     protected $casts = [];
 
-    public static function m_get_all($limit)
+    public static function m_get_all($limit, $search)
     {
         try {
             $student = Student::select(
@@ -55,8 +55,13 @@ class Student extends Model
                 'students.created_at',
                 'users.name',
                 'users.email'
-            )->orderBy('students.id', "desc")
+            )
             ->join('users', 'students.user_id', 'users.id')
+            ->where(function ($q) use ($search) {
+                $q->where('students.nis', 'like', "%${search}%")
+                ->orWhere('users.name', 'like', "%${search}%");
+            })
+            ->orderBy('students.id', "desc")
             ->paginate($limit);
     
             return $student;
